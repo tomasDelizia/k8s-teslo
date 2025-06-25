@@ -32,3 +32,9 @@ kubectl apply -f backend.yml
 minikube service backend-service
 # Or
 kubectl port-forward service/backend-service 3000:3000
+
+# Other commands
+# Restart all deployments
+kubectl rollout restart deployment
+# Restart a specific deployment
+kubectl rollout restart deployment deployment.apps/postgres-deployment
